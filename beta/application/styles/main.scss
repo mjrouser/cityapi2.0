@@ -1,0 +1,63 @@
+$iconSpritePath: "/img/glyphicons-halflings.png" !default;
+$iconWhiteSpritePath: "/img/glyphicons-halflings-white.png" !default;
+
+@import "../../vendor/jlong/sass-twitter-bootstrap/lib/bootstrap";
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 40px;
+}
+
+#main {
+    height: 100%;
+}
+
+#map {
+    height: 100%;
+
+    img {
+        max-width: none;
+    }
+}
+
+.container-root {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.login-with-facebook {
+    display: inline-block;
+    width: 280px;
+    height: 47px;
+
+    background: url(../img/auth-login-facebook.png);
+
+    &:hover {
+        background: url(../img/auth-login-facebook-hover.png);
+    }
+}
+
+@mixin aspect-sizer($ratio) {
+    padding-top: percentage(1 / $ratio);
+}
+
+.aspect-container {
+    position: relative;
+}
+.aspect-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.aspect-sizer-4-3 {
+    @include aspect-sizer(4/3);
+}
+.aspect-sizer-8-3 {
+    @include aspect-sizer(8/3);
+}
